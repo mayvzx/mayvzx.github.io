@@ -552,6 +552,16 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
 .response-status.has-error{color:#941b39}
 #answer-retry{margin:16px auto}
 #answer-reset{display:block;margin:16px auto 0}
+.ui-icon{display:inline-block;width:20px;height:20px;vertical-align:-.2em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.tiny-heart .ui-icon,.track-heart .ui-icon{width:23px;height:23px}
+.listen-skip .ui-icon{width:17px;height:17px;transition:transform .25s}
+.listen-skip:hover .ui-icon{transform:translate(2px,-2px)}
+.ornament .ui-icon{width:22px;height:22px;vertical-align:-.18em;margin:0 6px}
+.memory-mark{display:flex;align-items:center;justify-content:center;width:25px;height:25px}
+.memory-mark .ui-icon{width:21px;height:21px}
+.book-play-icon{width:25px;height:25px;fill:currentColor}
+.play[aria-pressed='true'] .pause-shape{display:block}.play[aria-pressed='true'] .play-shape{display:none}
+.letter p>.ui-icon{width:18px;height:18px}
 
 </style>
 </head>
@@ -563,12 +573,12 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
     <div class="headphone-art" aria-hidden="true"><svg viewBox="0 0 140 140"><path class="headphone-halo" d="M24 79V60a46 46 0 0 1 92 0v19"/><path d="M31 81V61a39 39 0 0 1 78 0v20"/><rect x="21" y="77" width="16" height="37" rx="7" transform="rotate(-13 29 95)"/><rect x="103" y="77" width="16" height="37" rx="7" transform="rotate(13 111 95)"/></svg></div>
     <h2 id="headphone-title" tabindex="-1">Se puder,<br><span>use fones de ouvido.</span></h2>
     <p id="headphone-copy">Pra ouvir cada detalhe<br>do que eu fiz pensando em você.</p>
-    <button class="headphone-continue" id="dismiss-headphones" type="button">Entrar na música <span aria-hidden="true">→</span></button>
+    <button class="headphone-continue" id="dismiss-headphones" type="button">Entrar na música <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button>
     <p class="headphone-optional">Você também pode ouvir sem fones.</p>
   </div>
 </aside>
 <section class="music-intro" id="music-intro" aria-labelledby="song-title">
-  <header class="listen-header"><p><span class="tiny-heart" aria-hidden="true">♡</span> Do teu May, pra você</p><button class="listen-skip" type="button" id="skip-music">Ir para o livro <span aria-hidden="true">↗</span></button></header>
+  <header class="listen-header"><p><span class="tiny-heart" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 5.6a5.3 5.3 0 0 0-7.5 0L12 6.5l-.9-.9a5.3 5.3 0 0 0-7.5 7.5L12 21l8.4-7.9a5.3 5.3 0 0 0 0-7.5Z"/></svg></span> Do teu May, pra você</p><button class="listen-skip" type="button" id="skip-music">Ir para o livro <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M7 6h11v11"/></svg></span></button></header>
   <div class="listen-layout">
     <div class="record-panel">
       <div class="album-art"><img src="assets/images/quarto.png" width="941" height="1672" alt="Capa da música, com uma imagem imaginada de nós dois" fetchpriority="high"><span class="album-stamp" aria-hidden="true">M · M</span></div>
@@ -578,9 +588,9 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
     <div class="lyrics-panel" aria-label="Letra da música">
       <div class="lyrics-heading"><h2>Letra</h2><button class="follow-button" id="follow-lyrics" type="button" aria-pressed="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg> Acompanhando</button></div>
       <div class="lyrics-window" id="lyrics-window" tabindex="0" aria-label="Letra sincronizada; role para explorar">
-        <ol class="lyrics-list" id="lyrics-list"><li class="lyric-row" data-line="0"><div class="lyric-section">Introdução</div><button class="lyric-line" type="button" disabled aria-label="Ouvir: Mariazinha…">Mariazinha…</button></li>
+        <ol class="lyrics-list" id="lyrics-list"><li class="lyric-row" data-line="0"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Mariazinha…">Mariazinha…</button></li>
 <li class="lyric-row" data-line="1"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Essa é pra quando tu acordar.">Essa é pra quando tu acordar.</button></li>
-<li class="lyric-row" data-line="2"><div class="lyric-section">Verso 1</div><button class="lyric-line" type="button" disabled aria-label="Ouvir: Mariazinha, dou play no teu áudio">Mariazinha, dou play no teu áudio</button></li>
+<li class="lyric-row" data-line="2"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Mariazinha, dou play no teu áudio">Mariazinha, dou play no teu áudio</button></li>
 <li class="lyric-row" data-line="3"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Só pra ouvir de novo teu jeito de falar">Só pra ouvir de novo teu jeito de falar</button></li>
 <li class="lyric-row" data-line="4"><button class="lyric-line" type="button" disabled aria-label="Ouvir: A distância deixa a noite comprida">A distância deixa a noite comprida</button></li>
 <li class="lyric-row" data-line="5"><button class="lyric-line" type="button" disabled aria-label="Ouvir: E eu invento assunto pra tu não desligar">E eu invento assunto pra tu não desligar</button></li>
@@ -592,15 +602,15 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
 <li class="lyric-row" data-line="11"><button class="lyric-line" type="button" disabled aria-label="Ouvir: E esse teu jeito me faz perder a hora">E esse teu jeito me faz perder a hora</button></li>
 <li class="lyric-row" data-line="12"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Eu vou ficando só pra ouvir tua risada">Eu vou ficando só pra ouvir tua risada</button></li>
 <li class="lyric-row" data-line="13"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Até o sono desistir e ir embora">Até o sono desistir e ir embora</button></li>
-<li class="lyric-row" data-line="14"><div class="lyric-section">Pré-refrão</div><button class="lyric-line" type="button" disabled aria-label="Ouvir: Se tu pensa que eu vou querer outra">Se tu pensa que eu vou querer outra</button></li>
+<li class="lyric-row" data-line="14"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Se tu pensa que eu vou querer outra">Se tu pensa que eu vou querer outra</button></li>
 <li class="lyric-row" data-line="15"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Eu tô pensando numa data pra te ver">Eu tô pensando numa data pra te ver</button></li>
 <li class="lyric-row" data-line="16"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Quero teu bom-dia perto do ouvido">Quero teu bom-dia perto do ouvido</button></li>
 <li class="lyric-row" data-line="17"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Sem uma tela entre mim e você">Sem uma tela entre mim e você</button></li>
-<li class="lyric-row" data-line="18"><div class="lyric-section">Refrão</div><button class="lyric-line" type="button" disabled aria-label="Ouvir: Maria, eu tô pensando em casar">Maria, eu tô pensando em casar</button></li>
+<li class="lyric-row" data-line="18"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Maria, eu tô pensando em casar">Maria, eu tô pensando em casar</button></li>
 <li class="lyric-row" data-line="19"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Tu com medo de eu ir, eu querendo ficar">Tu com medo de eu ir, eu querendo ficar</button></li>
 <li class="lyric-row" data-line="20"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Hoje, tua voz do outro lado da linha">Hoje, tua voz do outro lado da linha</button></li>
 <li class="lyric-row" data-line="21"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Eu quero acordar com minha Mariazinha">Eu quero acordar com minha Mariazinha</button></li>
-<li class="lyric-row" data-line="22"><div class="lyric-section">Verso 2</div><button class="lyric-line" type="button" disabled aria-label="Ouvir: Tu me conta um plano, eu já faço torcida">Tu me conta um plano, eu já faço torcida</button></li>
+<li class="lyric-row" data-line="22"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Tu me conta um plano, eu já faço torcida">Tu me conta um plano, eu já faço torcida</button></li>
 <li class="lyric-row" data-line="23"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Imagino tua cara quando realizar">Imagino tua cara quando realizar</button></li>
 <li class="lyric-row" data-line="24"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Quando tu fala dos teus guias, eu escuto">Quando tu fala dos teus guias, eu escuto</button></li>
 <li class="lyric-row" data-line="25"><button class="lyric-line" type="button" disabled aria-label="Ouvir: É mais um jeito de aprender a te amar">É mais um jeito de aprender a te amar</button></li>
@@ -612,15 +622,15 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
 <li class="lyric-row" data-line="31"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Fico sorrindo pro celular também">Fico sorrindo pro celular também</button></li>
 <li class="lyric-row" data-line="32"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Às vezes termino a conversa contigo">Às vezes termino a conversa contigo</button></li>
 <li class="lyric-row" data-line="33"><button class="lyric-line" type="button" disabled aria-label="Ouvir: E fico pensando em você além">E fico pensando em você além</button></li>
-<li class="lyric-row" data-line="34"><div class="lyric-section">Refrão</div><button class="lyric-line" type="button" disabled aria-label="Ouvir: Maria, eu tô pensando em casar">Maria, eu tô pensando em casar</button></li>
+<li class="lyric-row" data-line="34"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Maria, eu tô pensando em casar">Maria, eu tô pensando em casar</button></li>
 <li class="lyric-row" data-line="35"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Tu com medo de eu ir, eu querendo ficar">Tu com medo de eu ir, eu querendo ficar</button></li>
 <li class="lyric-row" data-line="36"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Hoje, tua voz do outro lado da linha">Hoje, tua voz do outro lado da linha</button></li>
 <li class="lyric-row" data-line="37"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Eu quero acordar com minha Mariazinha">Eu quero acordar com minha Mariazinha</button></li>
-<li class="lyric-row" data-line="38"><div class="lyric-section">Ponte</div><button class="lyric-line" type="button" disabled aria-label="Ouvir: Quero te puxar pra dançar na cozinha">Quero te puxar pra dançar na cozinha</button></li>
+<li class="lyric-row" data-line="38"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Quero te puxar pra dançar na cozinha">Quero te puxar pra dançar na cozinha</button></li>
 <li class="lyric-row" data-line="39"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Sem olhar a hora de me despedir">Sem olhar a hora de me despedir</button></li>
 <li class="lyric-row" data-line="40"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Tu pedindo “fica mais”, toda dengosa">Tu pedindo “fica mais”, toda dengosa</button></li>
 <li class="lyric-row" data-line="41"><button class="lyric-line" type="button" disabled aria-label="Ouvir: E eu rindo: “meu amor, eu moro aqui”">E eu rindo: “meu amor, eu moro aqui”</button></li>
-<li class="lyric-row" data-line="42"><div class="lyric-section">Refrão final</div><button class="lyric-line" type="button" disabled aria-label="Ouvir: Maria, eu tô pensando em casar">Maria, eu tô pensando em casar</button></li>
+<li class="lyric-row" data-line="42"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Maria, eu tô pensando em casar">Maria, eu tô pensando em casar</button></li>
 <li class="lyric-row" data-line="43"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Tu com medo de eu ir, eu querendo ficar">Tu com medo de eu ir, eu querendo ficar</button></li>
 <li class="lyric-row" data-line="44"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Hoje, tua voz do outro lado da linha">Hoje, tua voz do outro lado da linha</button></li>
 <li class="lyric-row" data-line="45"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Eu quero acordar com minha Mariazinha">Eu quero acordar com minha Mariazinha</button></li>
@@ -628,15 +638,15 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
 <li class="lyric-row" data-line="47"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Te ter por perto quando o dia acabar">Te ter por perto quando o dia acabar</button></li>
 <li class="lyric-row" data-line="48"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Hoje eu deixo essa música contigo">Hoje eu deixo essa música contigo</button></li>
 <li class="lyric-row" data-line="49"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Um dia quero cantar sem precisar mandar">Um dia quero cantar sem precisar mandar</button></li>
-<li class="lyric-row" data-line="50"><div class="lyric-section">Final</div><button class="lyric-line" type="button" disabled aria-label="Ouvir: Mariazinha…">Mariazinha…</button></li>
+<li class="lyric-row" data-line="50"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Mariazinha…">Mariazinha…</button></li>
 <li class="lyric-row" data-line="51"><button class="lyric-line" type="button" disabled aria-label="Ouvir: Essa é pra quando tu acordar.">Essa é pra quando tu acordar.</button></li></ol>
-        <p class="lyrics-end" aria-hidden="true">Quando a canção disser tudo,<br> ainda tenho algo pra você. <span>♡</span></p>
+        <p class="lyrics-end" aria-hidden="true">Quando a canção disser tudo,<br> ainda tenho algo pra você. <span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 5.6a5.3 5.3 0 0 0-7.5 0L12 6.5l-.9-.9a5.3 5.3 0 0 0-7.5 7.5L12 21l8.4-7.9a5.3 5.3 0 0 0 0-7.5Z"/></svg></span></p>
       </div>
       <p class="lyrics-status" id="lyrics-status" role="status">Aperta o play e acompanha comigo.</p>
     </div>
   </div>
   <div class="listen-controls" role="group" aria-label="Controles da música">
-    <div class="listen-track"><img src="assets/images/quarto.png" width="48" height="48" alt=""><div><strong>Mariazinha</strong><span>Feita pelo teu May</span></div><span class="track-heart" aria-hidden="true">♡</span></div>
+    <div class="listen-track"><img src="assets/images/quarto.png" width="48" height="48" alt=""><div><strong>Mariazinha</strong><span>Feita pelo teu May</span></div><span class="track-heart" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 5.6a5.3 5.3 0 0 0-7.5 0L12 6.5l-.9-.9a5.3 5.3 0 0 0-7.5 7.5L12 21l8.4-7.9a5.3 5.3 0 0 0 0-7.5Z"/></svg></span></div>
     <div class="listen-transport">
       <div class="transport-buttons"><button class="icon-button" type="button" id="restart-song" aria-label="Voltar ao início da música"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14M19 5 7 12l12 7Z"/></svg></button><button class="intro-play" id="intro-play" type="button" aria-label="Tocar Mariazinha" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="play-shape" d="m8 5 11 7-11 7Z"/><path class="pause-shape" d="M7 5h4v14H7ZM14 5h4v14h-4Z"/></svg></button><button class="icon-button" type="button" id="to-book" aria-label="Abrir Nosso próximo capítulo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5v14M5 5l12 7-12 7Z"/></svg></button></div>
       <div class="listen-timeline"><span id="intro-elapsed">0:00</span><label class="sr-only" for="intro-seek">Posição da música</label><input id="intro-seek" type="range" min="0" max="100" step="0.01" value="0" disabled><span id="intro-duration">3:12</span></div>
@@ -653,7 +663,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
       <p class="chapter-label" aria-live="polite">Página <b id="current-page">1</b> de 5</p>
     </div>
     <div class="player" role="group" aria-label="Música Mariazinha">
-      <button class="play" id="play" type="button" aria-label="Tocar Mariazinha" aria-pressed="false"><span aria-hidden="true">▶</span></button>
+      <button class="play" id="play" type="button" aria-label="Tocar Mariazinha" aria-pressed="false"><svg class="book-play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="play-shape" d="m8 5 11 7-11 7Z"/><path class="pause-shape" d="M7 5h4v14H7ZM14 5h4v14h-4Z"/></svg></button>
       <div class="player__mid">
         <span class="player__title">Mariazinha · feita pra você</span>
         <label class="sr-only" for="seek">Posição da música</label>
@@ -667,23 +677,23 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
   </header>
   <main class="stage" id="stage">
     <section class="chapter is-active" id="chapter-1" aria-labelledby="title-1" data-page="0">
-      <div class="chapter-head"><p class="eyebrow">Um livrinho só pra você</p><h1 id="title-1" tabindex="-1">Nosso próximo<br> capítulo</h1><span class="ornament" aria-hidden="true">· ♡ ·</span></div>
+      <div class="chapter-head"><p class="eyebrow">Um livrinho só pra você</p><h1 id="title-1" tabindex="-1">Nosso próximo<br> capítulo</h1><span class="ornament" aria-hidden="true">· <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 5.6a5.3 5.3 0 0 0-7.5 0L12 6.5l-.9-.9a5.3 5.3 0 0 0-7.5 7.5L12 21l8.4-7.9a5.3 5.3 0 0 0 0-7.5Z"/></svg> ·</span></div>
       <div class="cover-layout">
         <figure class="photo cover-photo"><img src="assets/images/quarto.png" width="941" height="1672" alt="Imagem imaginada de nós dois juntinhos, numa selfie no espelho"><figcaption>Um carinho em forma de imaginação.</figcaption></figure>
-        <div class="letter"><p>Oii, minha princesa 🤍</p><p>Eu quis fazer uma coisa só pra você. Um cantinho com algumas coisas que eu guardo sobre nós, outras que eu ainda imagino e uma pergunta que eu quero te fazer com carinho.</p><p class="signature">Do teu May.</p></div>
+        <div class="letter"><p>Oii, minha princesa <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 5.6a5.3 5.3 0 0 0-7.5 0L12 6.5l-.9-.9a5.3 5.3 0 0 0-7.5 7.5L12 21l8.4-7.9a5.3 5.3 0 0 0 0-7.5Z"/></svg></p><p>Eu quis fazer uma coisa só pra você. Um cantinho com algumas coisas que eu guardo sobre nós, outras que eu ainda imagino e uma pergunta que eu quero te fazer com carinho.</p><p class="signature">Do teu May.</p></div>
       </div>
-      <div class="actions cover-actions"><button class="btn" type="button" data-go="1">Abrir nosso livro <span aria-hidden="true">→</span></button><button class="btn secondary" id="cover-play" type="button">Ouvir a letra <span aria-hidden="true">♫</span></button></div>
+      <div class="actions cover-actions"><button class="btn" type="button" data-go="1">Abrir nosso livro <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button><button class="btn secondary" id="cover-play" type="button">Ouvir a letra <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18V5l11-2v13M9 9l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2.5"/><ellipse cx="17" cy="16" rx="3" ry="2.5"/></svg></span></button></div>
       <p class="small-note">Pode ler no teu tempo, meu amor.</p>
     </section>
     <section class="chapter" id="chapter-2" aria-labelledby="title-2" data-page="1" hidden>
       <div class="chapter-head"><p class="eyebrow">01 · Os detalhes que eu guardo</p><h2 id="title-2" tabindex="-1">Tem tanta coisa<br> bonita em você.</h2><p class="hint">Toca em cada lembrança pra abrir.</p></div>
       <div class="memories">
-        <details class="memory"><summary>Teu jeitinho 220<span class="memory-mark" aria-hidden="true">+</span></summary><div class="memory-copy"><p>Eu gosto desse teu jeito de passar por duzentos assuntos diferentes. Contigo, sempre tem alguma coisa pra ouvir, pra contar ou pra rir KSKSKSK.</p></div></details>
-        <details class="memory"><summary>Os dedinhos do pé<span class="memory-mark" aria-hidden="true">+</span></summary><div class="memory-copy"><p>Você me contou que mexe os dedinhos do pé quando fica animada. Eu guardei esse detalhe, minha princesa. É uma dessas pequenas coisas que me fazem sorrir pensando em você.</p></div></details>
-        <details class="memory"><summary>Te ouvir falar de livros<span class="memory-mark" aria-hidden="true">+</span></summary><div class="memory-copy"><p>Eu gosto de ser alguém pra quem você quer contar sobre um livro. Gosto de te ouvir empolgada, explicando a história e dizendo o que achou.</p></div></details>
-        <details class="memory"><summary>O tamanho do teu coração<span class="memory-mark" aria-hidden="true">+</span></summary><div class="memory-copy"><p>Quando você contou que daria a mesa de doces e o bolo de um casamento porque a noiva estava sem dinheiro, eu fiquei admirando você. Lembro de te dizer: “Você é um anjo, tá vendo?” Esse teu cuidado com as pessoas é uma das coisas lindas que eu vejo em ti.</p></div></details>
+        <details class="memory"><summary>Teu jeitinho 220<span class="memory-mark" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M12 5v14"/></svg></span></summary><div class="memory-copy"><p>Eu gosto desse teu jeito de passar por duzentos assuntos diferentes. Contigo, sempre tem alguma coisa pra ouvir, pra contar ou pra rir KSKSKSK.</p></div></details>
+        <details class="memory"><summary>Os dedinhos do pé<span class="memory-mark" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M12 5v14"/></svg></span></summary><div class="memory-copy"><p>Você me contou que mexe os dedinhos do pé quando fica animada. Eu guardei esse detalhe, minha princesa. É uma dessas pequenas coisas que me fazem sorrir pensando em você.</p></div></details>
+        <details class="memory"><summary>Te ouvir falar de livros<span class="memory-mark" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M12 5v14"/></svg></span></summary><div class="memory-copy"><p>Eu gosto de ser alguém pra quem você quer contar sobre um livro. Gosto de te ouvir empolgada, explicando a história e dizendo o que achou.</p></div></details>
+        <details class="memory"><summary>O tamanho do teu coração<span class="memory-mark" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14M12 5v14"/></svg></span></summary><div class="memory-copy"><p>Quando você contou que daria a mesa de doces e o bolo de um casamento porque a noiva estava sem dinheiro, eu fiquei admirando você. Lembro de te dizer: “Você é um anjo, tá vendo?” Esse teu cuidado com as pessoas é uma das coisas lindas que eu vejo em ti.</p></div></details>
       </div>
-      <div class="actions"><button class="btn" type="button" data-go="2">Tem mais uma coisa <span aria-hidden="true">→</span></button></div>
+      <div class="actions"><button class="btn" type="button" data-go="2">Tem mais uma coisa <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></div>
     </section>
     <section class="chapter" id="chapter-3" aria-labelledby="title-3" data-page="2" hidden>
       <div class="chapter-head"><p class="eyebrow">02 · Esse carinho que é nosso</p><h2 id="title-3" tabindex="-1">Eu gosto de ser<br> teu May.</h2></div>
@@ -693,13 +703,13 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
         <figure class="photo"><img src="assets/images/pertinho.png" width="1086" height="1448" alt="Imagem imaginada de nós dois bem pertinho, com tua mão no meu rosto" loading="lazy"><figcaption>Ainda quero estar mais pertinho de você.</figcaption></figure>
       </div>
       <p class="small-note">Algumas cenas que eu imagino pra nós.</p>
-      <div class="actions"><button class="btn" type="button" data-go="3">Isso também importa pra mim <span aria-hidden="true">→</span></button></div>
+      <div class="actions"><button class="btn" type="button" data-go="3">Isso também importa pra mim <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></div>
     </section>
     <section class="chapter" id="chapter-4" aria-labelledby="title-4" data-page="3" hidden>
       <div class="chapter-head"><p class="eyebrow">03 · O cuidado que eu quero ter</p><h2 id="title-4" tabindex="-1">Quero merecer<br> sua confiança.</h2></div>
       <p class="date-mark">Sobre a nossa conversa de ontem</p>
       <div class="chapter-copy letter"><p>Ontem eu te chateei e te decepcionei mais uma vez. Fiz você ter que me explicar algo que eu já deveria saber.</p><p>Eu entendi o que você me disse e consigo imaginar como foi pra você. Não quero te fazer sentir aquilo de novo.</p><p>Obrigado por me ouvir e me desculpar, meu amor. Quero prestar mais atenção, te escutar e ter cuidado com as coisas que importam pra você.</p><blockquote class="pullquote">Quero fazer por onde<br> merecer tua confiança.</blockquote><p>Com atitudes. No jeito que eu te escuto, no cuidado com o que eu faço e no respeito ao que você me diz. É assim que eu quero cuidar de você e do que existe entre nós.</p></div>
-      <div class="actions"><button class="btn" type="button" data-go="4">A última página <span aria-hidden="true">→</span></button></div>
+      <div class="actions"><button class="btn" type="button" data-go="4">A última página <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></div>
     </section>
     <section class="chapter" id="chapter-5" aria-labelledby="title-5" data-page="4" hidden>
       <div class="chapter-head"><p class="eyebrow">04 · O próximo capítulo</p><h2 id="title-5" tabindex="-1">Ainda tem tanta coisa<br> que eu quero viver contigo.</h2></div>
@@ -707,13 +717,13 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
       <div class="chapter-copy letter"><p>Maria, eu gosto do que existe entre nós. Da nossa amizade, das nossas conversas e desse dengo que me faz sorrir.</p><p>Quero continuar dividindo meus dias contigo. Te ouvir, rir com você, estar mais perto e cuidar do que a gente construir.</p><p>E, se você também quiser, eu quero tentar de novo.</p></div>
       <h3 class="question">Maria, meu amor,<br> você quer voltar comigo?</h3>
       <p class="response-notice">Quando você escolher, sua resposta será enviada para o May. Você pode responder no seu tempo.</p>
-      <div class="answers" id="answer-options"><button class="btn" type="button" data-answer="yes">Quero tentar 🤍</button><button class="btn secondary" type="button" data-answer="talk">Quero conversar primeiro</button><button class="quiet-button" type="button" data-answer="no">Não quero voltar</button></div>
+      <div class="answers" id="answer-options"><button class="btn" type="button" data-answer="yes">Quero tentar <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 5.6a5.3 5.3 0 0 0-7.5 0L12 6.5l-.9-.9a5.3 5.3 0 0 0-7.5 7.5L12 21l8.4-7.9a5.3 5.3 0 0 0 0-7.5Z"/></svg></button><button class="btn secondary" type="button" data-answer="talk">Quero conversar primeiro</button><button class="quiet-button" type="button" data-answer="no">Não quero voltar</button></div>
       <p id="answer-status" class="response-status" role="status" aria-live="polite"></p>
       <div class="answer-box" id="answer-box" role="region" aria-labelledby="answer-title" hidden><h3 id="answer-title" tabindex="-1"></h3><p id="answer-copy"></p><button class="btn secondary" id="answer-retry" type="button" hidden>Tentar enviar novamente</button><button class="quiet-button" type="button" id="answer-reset">Escolher outra resposta</button></div>
     </section>
     <noscript><p>Pra abrir as outras páginas do livrinho e ouvir a música, ative o JavaScript no navegador.</p></noscript>
   </main>
-  <footer class="book-footer"><div class="page-controls"><button type="button" class="page-back" id="back" disabled><span aria-hidden="true">←</span> Página anterior</button><nav class="pages" aria-label="Páginas do livro"><button class="page-dot" type="button" data-go="0" aria-label="Capa" aria-current="page">1</button><button class="page-dot" type="button" data-go="1" aria-label="Os detalhes que eu guardo">2</button><button class="page-dot" type="button" data-go="2" aria-label="Eu gosto de ser teu May">3</button><button class="page-dot" type="button" data-go="3" aria-label="Quero merecer sua confiança">4</button><button class="page-dot" type="button" data-go="4" aria-label="O próximo capítulo">5</button></nav></div><p class="footer-signature">Com carinho, do teu May · 2026</p></footer>
+  <footer class="book-footer"><div class="page-controls"><button type="button" class="page-back" id="back" disabled><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 12H5m6-6-6 6 6 6"/></svg></span> Página anterior</button><nav class="pages" aria-label="Páginas do livro"><button class="page-dot" type="button" data-go="0" aria-label="Capa" aria-current="page">1</button><button class="page-dot" type="button" data-go="1" aria-label="Os detalhes que eu guardo">2</button><button class="page-dot" type="button" data-go="2" aria-label="Eu gosto de ser teu May">3</button><button class="page-dot" type="button" data-go="3" aria-label="Quero merecer sua confiança">4</button><button class="page-dot" type="button" data-go="4" aria-label="O próximo capítulo">5</button></nav></div><p class="footer-signature">Com carinho, do teu May · 2026</p></footer>
 </div>
 <script>
 (() => {
@@ -787,7 +797,6 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
       button.setAttribute('aria-pressed', String(playing));
       button.setAttribute('aria-label', playing ? 'Pausar Mariazinha' : 'Tocar Mariazinha');
     }
-    bookPlay.firstElementChild.textContent = playing ? 'Ⅱ' : '▶';
     listenMessage.textContent = playing ? 'Só escuta. Eu fiz pensando em você.' : songStarted ? 'Pode ouvir no teu tempo, minha princesa.' : 'Dá play, minha deusa. Essa é pra você.';
   }
   async function playSong() {
@@ -914,7 +923,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
         words[i].classList.toggle('is-sung', time >= word.end);
         words[i].classList.toggle('is-singing', time >= word.start && time < word.end && !audio.paused);
       });
-      lyricStatus.textContent = time > cue.end + 0.2 ? (index === cues.length - 1 ? 'Ainda tenho uma coisa pra te dizer…' : '♫') : audio.paused ? 'No teu tempo, minha princesa.' : '';
+      lyricStatus.textContent = time > cue.end + 0.2 ? (index === cues.length - 1 ? 'Ainda tenho uma coisa pra te dizer…' : 'Só escuta…') : audio.paused ? 'No teu tempo, minha princesa.' : '';
     } else lyricStatus.textContent = songStarted ? 'Só escuta esse comecinho…' : 'Aperta o play e acompanha comigo.';
     if (autoBookArmed && !audio.paused && songStarted && !intro.hidden && !opening && !userDraggingSeek && time >= lastLyricEnd + 1.25) openBook();
   }
@@ -1083,7 +1092,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
   const invitation = 'x5tUDmwbNtAHSXZ41CCfuArwuSqxNFdSLpQRaciUYJs';
   const responseStorageKey = 'maria-response-v1';
   const messages = {
-    yes: ['Eu tô sorrindo feito besta 🤍','Vamos conversar, minha princesa. Eu quero cuidar contigo desse próximo capítulo, um dia de cada vez.'],
+    yes: ['Eu tô sorrindo feito besta.','Vamos conversar, minha princesa. Eu quero cuidar contigo desse próximo capítulo, um dia de cada vez.'],
     talk: ['Claro, meu amor.','Quero te ouvir. Me conta como você se sente e o que você precisa. A gente pode conversar com calma.'],
     no: ['Obrigado por ler, Maria.','Eu respeito tua decisão. Guardo com carinho o que vivemos e te desejo coisas boas.']
   };
@@ -1166,7 +1175,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
   });
   document.querySelectorAll('.photo img').forEach(img => img.addEventListener('error', () => {
     const fallback = document.createElement('div'); fallback.className='media-unavailable';
-    fallback.textContent='Uma imagem que eu imaginei pra nós 🤍'; img.replaceWith(fallback);
+    fallback.textContent='Uma imagem que eu imaginei pra nós'; img.replaceWith(fallback);
   },{once:true}));
   updateControls();
   syncTime();
