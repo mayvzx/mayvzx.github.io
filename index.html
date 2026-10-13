@@ -362,6 +362,80 @@
     *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
     .chapter.is-active{opacity:1;transform:none}
   }
+/* Little listening notes tucked beside the photographs. */
+.photo-keepsake{min-width:0;position:relative;align-self:start}
+.photo-keepsake .photo{position:relative;z-index:1}
+.photo-keepsake .photo figcaption{font-size:12px;line-height:1.6}
+.photo-keepsake .cover-photo{width:100%;max-width:280px;margin:0 auto;transform:rotate(-2deg)}
+.photo-pair .photo-keepsake:first-child .photo{transform:rotate(-2deg)}
+.photo-pair .photo-keepsake:last-child{margin-top:26px}
+.photo-pair .photo-keepsake:last-child .photo{transform:rotate(2deg);margin-top:0}
+.keepsake-beijo{max-width:440px;margin:0 auto 38px}
+.keepsake-beijo .last-photo{margin-bottom:0}
+.photo-song-note{position:relative;margin:22px 0 0;padding:25px 20px 19px;background:#f5e7c9;border:1px solid #d8bd8b;box-shadow:2px 5px 0 #decba54d,0 9px 18px #4e122008;text-align:left;font-style:normal}
+.photo-song-note::before{content:'';position:absolute;top:-9px;left:calc(50% - 30px);width:60px;height:18px;background:#d8bd8870;border-inline:1px solid #c0a16a40;transform:rotate(-4deg);pointer-events:none}
+.song-note-eyebrow{margin:0 0 9px;font-size:10px;font-family:Trebuchet MS,Segoe UI,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#785431;line-height:1.6}
+.song-name{margin:0;font-family:var(--serif);font-size:clamp(22px,4.5vw,28px);font-weight:400;line-height:1.18;color:var(--wine-deep);overflow-wrap:anywhere}
+.song-artist{margin:6px 0 0;font-family:Trebuchet MS,Segoe UI,sans-serif;font-size:12px;line-height:1.5;color:var(--ink-soft)}
+.song-quote{margin:20px 0 17px;padding:0 0 0 12px;border-left:2px solid #b8914f;font-family:var(--serif);font-size:21px;font-style:italic;line-height:1.4;color:var(--wine-ink)}
+.song-dedication{font-size:15px;line-height:1.8;margin:0;color:var(--ink)}
+.song-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:17px}
+.song-open{min-height:44px;display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:9px 13px;border:1px solid var(--wine);border-radius:5px;background:var(--wine);color:var(--paper);font-family:Trebuchet MS,Segoe UI,sans-serif;font-size:12px;line-height:1.4;cursor:pointer;touch-action:manipulation;transition:transform .2s,background .2s,box-shadow .2s}
+.song-open .ui-icon{width:17px;height:17px;fill:currentColor;stroke-width:1.4}
+.song-open[aria-expanded='true']{background:var(--paper);color:var(--wine);box-shadow:inset 0 2px 3px #4e122017}
+.song-open[aria-expanded='true'] .ui-icon{fill:none}
+.song-service-link{display:inline-flex;min-height:44px;align-items:center;gap:4px;padding:6px 0;font-family:Trebuchet MS,Segoe UI,sans-serif;font-size:12px;color:var(--wine);text-decoration:underline;text-underline-offset:4px}
+.song-service-link .ui-icon{height:14px;width:14px}
+.song-player-slot{margin-top:15px;width:100%;min-width:0}
+.song-player-slot[hidden]{display:none}
+.song-player-slot iframe{display:block;width:100%;height:152px;border:0;border-radius:12px;background:#202020}
+.song-player-slot iframe.song-video{height:auto;min-height:200px;aspect-ratio:16/9}
+.song-recording{display:none}
+.note-player{display:grid;grid-template-columns:44px minmax(0,1fr);gap:13px;align-items:center;background:#fbf5e9cc;border:1px solid #d3b789;border-radius:9px;padding:13px 12px}
+.note-play{width:44px;height:44px;padding:11px;border:0;border-radius:50%;background:var(--wine);color:var(--paper);cursor:pointer;touch-action:manipulation;transition:transform .2s,background .2s}
+.note-play:active{transform:scale(.93)}
+.note-play-icon{width:22px;height:22px;fill:currentColor;display:block}
+.note-timeline{min-width:0}
+.note-timeline input[type=range]{display:block;width:100%;height:44px;margin:0;background:transparent;--progress:0%}
+.note-timeline input[type=range]::-webkit-slider-runnable-track{height:4px;background:linear-gradient(to right,var(--wine) var(--progress),#dac5a6 var(--progress));border:0;border-radius:10px}
+.note-timeline input[type=range]::-moz-range-track{height:4px;background:linear-gradient(to right,var(--wine) var(--progress),#dac5a6 var(--progress));border:0;border-radius:10px}
+.note-timeline input[type=range]::-webkit-slider-thumb{height:14px;width:14px;margin-top:-5px;border:2px solid var(--paper);background:var(--wine);box-shadow:0 1px 4px #4e122033}
+.note-timeline input[type=range]::-moz-range-thumb{height:12px;width:12px;border:2px solid var(--paper);background:var(--wine)}
+.note-times{display:flex;justify-content:space-between;font-family:Trebuchet MS,Segoe UI,sans-serif;font-size:11px;font-variant-numeric:tabular-nums;line-height:1.4;margin-top:-5px;color:var(--ink-soft)}
+.note-player.is-loading .note-play::after{content:'';position:absolute;inset:9px;border:2px solid #fbf5e966;border-top-color:var(--paper);border-radius:50%;animation:loadingSpin .8s linear infinite}
+.note-player.is-loading .note-play-icon{opacity:.2}
+.song-player-hint:empty{display:none}
+.note-play:focus-visible,.note-timeline input:focus-visible{outline:3px solid #a97738;outline-offset:4px}
+.song-player-hint{font-family:Trebuchet MS,Segoe UI,sans-serif;font-size:12px;line-height:1.6;color:var(--ink-soft);margin:10px 0 0}
+.soundtrack-intro{max-width:450px;margin:22px auto 0;font-size:16px;line-height:1.8;color:var(--ink-soft)}
+.dedication-list{max-width:565px;margin:0 auto;border-top:1px solid var(--gold-soft)}
+.dedication-track{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding:30px 0;border-bottom:1px solid var(--gold-soft)}
+.dedication-number{font-size:17px;font-style:italic;color:#987245;padding-top:23px}
+.dedication-track .song-name{font-size:32px}
+.dedication-track .song-note-eyebrow{margin-bottom:8px}
+.dedication-heading{font-style:italic;font-size:19px;color:var(--wine);margin:20px 0 9px;line-height:1.5}
+.dedication-track .song-dedication{font-size:16px}
+.dedication-special{background:#efe2cc60;padding:26px 18px 26px 12px;margin-top:22px;border:1px solid var(--gold-soft)}
+.soundtrack-signature{margin:34px auto 0;text-align:center;color:var(--wine);font-size:19px;font-style:italic;line-height:1.6}
+.song-open:focus-visible,.song-service-link:focus-visible{outline:3px solid #a97738;outline-offset:4px}
+@media(hover:hover){.song-open:hover{background:var(--wine-deep);color:var(--paper);transform:translateY(-2px);box-shadow:0 5px 12px #4e12201a}}
+.song-open:active{transform:scale(.97)}
+@media(max-width:600px){
+  .cover-layout{gap:30px}.cover-layout .photo-keepsake{width:100%;max-width:400px;margin:0 auto}
+  .photo-keepsake .cover-photo{max-width:245px}
+  .photo-pair{grid-template-columns:1fr;gap:38px;max-width:420px;margin:34px auto}
+  .photo-pair .photo-keepsake:last-child{margin-top:0}
+  .photo-pair .photo{width:90%;margin-inline:auto;padding:8px}
+  .photo-song-note{padding:25px 21px 20px;margin-top:23px}
+  .song-dedication{font-size:16px}.song-name{font-size:27px}
+  .dedication-track{gap:10px;grid-template-columns:24px minmax(0,1fr);padding-block:26px}
+  .dedication-track .song-name{font-size:30px}
+  .dedication-special{padding:24px 12px 24px 8px}
+  .pages{gap:5px}.page-dot{flex:0 0 44px}
+}
+@media(max-width:359px){.pages{gap:2px}.photo-song-note{padding-inline:15px}}
+@media(prefers-reduced-motion:reduce){.song-open{transition:none}.song-open:hover,.song-open:active{transform:none}}
+
 /* A música é a primeira página da experiência. */
 :root{--music-bg:#111a16;--music-ink:#f5f4ed;--music-soft:#abb6af;--mint:#bcdec7;--music-font:'Trebuchet MS','Segoe UI',sans-serif}
 button,input[type='range'],summary{touch-action:manipulation}
@@ -660,7 +734,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
   <header class="topbar">
     <div class="topbar__line">
       <p class="brand">Do teu May, pra você</p>
-      <p class="chapter-label" aria-live="polite">Página <b id="current-page">1</b> de 5</p>
+      <p class="chapter-label" aria-live="polite">Página <b id="current-page">1</b> de 6</p>
     </div>
     <div class="player" role="group" aria-label="Música Mariazinha">
       <button class="play" id="play" type="button" aria-label="Tocar Mariazinha" aria-pressed="false"><svg class="book-play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="play-shape" d="m8 5 11 7-11 7Z"/><path class="pause-shape" d="M7 5h4v14H7ZM14 5h4v14h-4Z"/></svg></button>
@@ -679,7 +753,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
     <section class="chapter is-active" id="chapter-1" aria-labelledby="title-1" data-page="0">
       <div class="chapter-head"><p class="eyebrow">Um livrinho só pra você</p><h1 id="title-1" tabindex="-1">Nosso próximo<br> capítulo</h1><span class="ornament" aria-hidden="true">· <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 5.6a5.3 5.3 0 0 0-7.5 0L12 6.5l-.9-.9a5.3 5.3 0 0 0-7.5 7.5L12 21l8.4-7.9a5.3 5.3 0 0 0 0-7.5Z"/></svg> ·</span></div>
       <div class="cover-layout">
-        <figure class="photo cover-photo"><img src="assets/images/quarto.png" width="941" height="1672" alt="Imagem imaginada de nós dois juntinhos, numa selfie no espelho"><figcaption>Um carinho em forma de imaginação.</figcaption></figure>
+        <div class="photo-keepsake keepsake-quarto"><figure class="photo cover-photo"><img src="assets/images/quarto.png" width="941" height="1672" alt="Imagem imaginada de nós dois juntinhos, numa selfie no espelho"><figcaption>Um carinho em forma de imaginação.</figcaption></figure><div class="photo-song-note" data-photo-song="quarto"><p class="song-note-eyebrow">Essa cena tem uma música</p><h2 class="song-name">Meu Vício É Você</h2><p class="song-artist">Alcione</p><blockquote class="song-quote" cite="https://www.vagalume.com.br/alcione/meu-vicio-e-voce.html">“Vim rolando na vida<br>E parei em você”</blockquote><p class="song-dedication">Essa me lembra a vontade de ficar mais um pouquinho contigo. Mais um áudio, mais uma conversa, mais um ‘meu May’. Imagino a gente assim, juntinho no espelho, sem precisar encerrar a chamada pra dormir.</p><div class="song-actions"><button class="song-open" type="button" data-audio="assets/audio/meu-vicio-e-voce.m4a" data-song="Meu Vício É Você" data-artist="Alcione" aria-expanded="false" aria-controls="song-player-quarto" aria-label="Ouvir Meu Vício É Você, de Alcione"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span class="song-button-label">Ouvir esta música</span></button></div><div class="song-player-slot" id="song-player-quarto" hidden></div></div></div>
         <div class="letter"><p>Oii, minha princesa <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 5.6a5.3 5.3 0 0 0-7.5 0L12 6.5l-.9-.9a5.3 5.3 0 0 0-7.5 7.5L12 21l8.4-7.9a5.3 5.3 0 0 0 0-7.5Z"/></svg></p><p>Eu quis fazer uma coisa só pra você. Um cantinho com algumas coisas que eu guardo sobre nós, outras que eu ainda imagino e uma pergunta que eu quero te fazer com carinho.</p><p class="signature">Do teu May.</p></div>
       </div>
       <div class="actions cover-actions"><button class="btn" type="button" data-go="1">Abrir nosso livro <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button><button class="btn secondary" id="cover-play" type="button">Ouvir a letra <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18V5l11-2v13M9 9l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2.5"/><ellipse cx="17" cy="16" rx="3" ry="2.5"/></svg></span></button></div>
@@ -699,21 +773,22 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
       <div class="chapter-head"><p class="eyebrow">02 · Esse carinho que é nosso</p><h2 id="title-3" tabindex="-1">Eu gosto de ser<br> teu May.</h2></div>
       <div class="chapter-copy letter"><p>Eu gosto de ouvir um “Amooorr” e saber que vem alguma coisa. Um livro, uma história do trabalho, uma fofoca ou uma besteira que vai me fazer rir KSKSKSK.</p><p>Gosto quando você me chama de teu May. Gosto de conversar contigo e de ter vontade de dividir meu dia com você, minha deusa.</p><p>E eu ainda imagino a gente mais pertinho. Fazendo coisas simples, conversando sem perceber a hora passar, ficando juntinho.</p></div>
       <div class="photo-pair">
-        <figure class="photo"><img src="assets/images/quintal.png" width="1087" height="1448" alt="Imagem imaginada de nós dois numa selfie no quintal" loading="lazy"><figcaption>Uma vida contigo também cabe nas coisas simples.</figcaption></figure>
-        <figure class="photo"><img src="assets/images/pertinho.png" width="1086" height="1448" alt="Imagem imaginada de nós dois bem pertinho, com tua mão no meu rosto" loading="lazy"><figcaption>Ainda quero estar mais pertinho de você.</figcaption></figure>
+        <div class="photo-keepsake keepsake-quintal"><figure class="photo"><img src="assets/images/quintal.png" width="1087" height="1448" alt="Imagem imaginada de nós dois numa selfie no quintal" loading="lazy"><figcaption>Uma vida contigo também cabe nas coisas simples.</figcaption></figure><div class="photo-song-note" data-photo-song="quintal"><p class="song-note-eyebrow">Essa cena tem uma música</p><h3 class="song-name">Charme</h3><p class="song-artist">Liniker</p><blockquote class="song-quote" cite="https://www.cifraclub.com.br/liniker/charme/letra/">“Tempero de amor feroz”</blockquote><p class="song-dedication">Tem uma beleza viva nessa música que me lembra você, minha deusa. Teu olhar, tua presença, esse teu jeito de ser. Escolhi essa cena ao sol porque é assim que eu te imagino: à vontade, linda, sendo você.</p><div class="song-actions"><button class="song-open" type="button" data-audio="assets/audio/charme.m4a" data-song="Charme" data-artist="Liniker" aria-expanded="false" aria-controls="song-player-quintal" aria-label="Ouvir Charme, de Liniker"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span class="song-button-label">Ouvir esta música</span></button></div><div class="song-player-slot" id="song-player-quintal" hidden></div></div></div>
+        <div class="photo-keepsake keepsake-pertinho"><figure class="photo"><img src="assets/images/pertinho.png" width="1086" height="1448" alt="Imagem imaginada de nós dois bem pertinho, com tua mão no meu rosto" loading="lazy"><figcaption>Ainda quero estar mais pertinho de você.</figcaption></figure><div class="photo-song-note" data-photo-song="pertinho"><p class="song-note-eyebrow">Essa cena tem uma música</p><h3 class="song-name">Pura Adrenalina</h3><p class="song-artist">Belo</p><blockquote class="song-quote" cite="https://www.youtube.com/watch?v=m0y4jzpqvEk">“Não tem por que fugir dessa atração”</blockquote><p class="song-dedication">Essa é pelo frio na barriga que você me dá. Olho pra essa cena, tua mão no meu rosto, e penso na vontade de te ter perto de verdade. Tem dengo, tem desejo e tem esse teu jeito de me deixar bobo.</p><div class="song-actions"><button class="song-open" type="button" data-audio="assets/audio/pura-adrenalina.m4a" data-song="Pura Adrenalina" data-artist="Belo" aria-expanded="false" aria-controls="song-player-pertinho" aria-label="Ouvir Pura Adrenalina, de Belo"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span class="song-button-label">Ouvir esta música</span></button></div><div class="song-player-slot" id="song-player-pertinho" hidden></div></div></div>
       </div>
       <p class="small-note">Algumas cenas que eu imagino pra nós.</p>
-      <div class="actions"><button class="btn" type="button" data-go="3">Isso também importa pra mim <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></div>
+      <div class="actions"><button class="btn" type="button" data-go="3">Tem música que é você <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></div>
     </section>
-    <section class="chapter" id="chapter-4" aria-labelledby="title-4" data-page="3" hidden>
-      <div class="chapter-head"><p class="eyebrow">03 · O cuidado que eu quero ter</p><h2 id="title-4" tabindex="-1">Quero merecer<br> sua confiança.</h2></div>
+    <section class="chapter" id="chapter-songs" aria-labelledby="title-songs" data-page="3" hidden><div class="chapter-head"><p class="eyebrow">03 · Eu te encontro nas canções</p><h2 id="title-songs" tabindex="-1">Tem música<br>que é você.</h2><p class="soundtrack-intro">Algumas canções começam a tocar e eu já penso em ti. Guardei aqui o que cada uma me faz sentir, minha princesa.</p></div><div class="dedication-list"><article class="dedication-track"><span class="dedication-number" aria-hidden="true">01</span><div class="dedication-body"><p class="song-note-eyebrow">Lado nosso · 01</p><h3 class="song-name">Aliança</h3><p class="song-artist">Tribalistas</p><p class="dedication-heading">Quando eu imagino o depois</p><p class="song-dedication">Essa música sonha com um encontro que vira uma vida a dois. Quando escuto, penso na gente tendo tempo, casa, planos e um cotidiano pra dividir. É bonito imaginar esse futuro contigo — e quero cuidar, desde agora, das pequenas atitudes que poderiam levar a gente até lá.</p><div class="song-actions"><button class="song-open" type="button" data-audio="assets/audio/alianca.m4a" data-song="Aliança" data-artist="Tribalistas" aria-expanded="false" aria-controls="song-player-dedication-0" aria-label="Ouvir Aliança, de Tribalistas"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span class="song-button-label">Ouvir esta música</span></button></div><div class="song-player-slot" id="song-player-dedication-0" hidden></div></div></article><article class="dedication-track"><span class="dedication-number" aria-hidden="true">02</span><div class="dedication-body"><p class="song-note-eyebrow">Lado nosso · 02</p><h3 class="song-name">Lisboa</h3><p class="song-artist">ANAVITÓRIA e Lenine</p><p class="dedication-heading">Fica mais um pouquinho</p><p class="song-dedication">Eu escuto nela um pedido de presença: ficar, conversar, deixar o mundo esperar um pouco. Me lembra nossas conversas e a vontade de continuar ouvindo tua voz. Imagino você chegando com um ‘Amooorr’, eu largando o que tô fazendo e te ouvindo de pertinho.</p><div class="song-actions"><button class="song-open" type="button" data-audio="assets/audio/lisboa.m4a" data-song="Lisboa" data-artist="ANAVITÓRIA e Lenine" aria-expanded="false" aria-controls="song-player-dedication-1" aria-label="Ouvir Lisboa, de ANAVITÓRIA e Lenine"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span class="song-button-label">Ouvir esta música</span></button></div><div class="song-player-slot" id="song-player-dedication-1" hidden></div></div></article><article class="dedication-track"><span class="dedication-number" aria-hidden="true">03</span><div class="dedication-body"><p class="song-note-eyebrow">Lado nosso · 03</p><h3 class="song-name">Feminina</h3><p class="song-artist">Athalyba E A Firma</p><p class="dedication-heading">Minha deusa tem nome</p><p class="song-dedication">O encanto, o desejo e a saudade dessa música me levam até você. Penso na tua beleza, no teu olhar e nesse jeito que me prende a atenção. Quando eu te chamo de minha deusa, tem muito disso: eu fico admirando a mulher que você é.</p><div class="song-actions"><button class="song-open" type="button" data-audio="assets/audio/feminina.m4a" data-song="Feminina" data-artist="Athalyba E A Firma" aria-expanded="false" aria-controls="song-player-dedication-2" aria-label="Ouvir Feminina, de Athalyba E A Firma"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span class="song-button-label">Ouvir esta música</span></button></div><div class="song-player-slot" id="song-player-dedication-2" hidden></div></div></article><article class="dedication-track"><span class="dedication-number" aria-hidden="true">04</span><div class="dedication-body"><p class="song-note-eyebrow">Lado nosso · 04</p><h3 class="song-name">Oceano</h3><p class="song-artist">Djavan</p><p class="dedication-heading">O tamanho dessa saudade</p><p class="song-dedication">Tem saudade e uma vontade imensa de reencontro nessa canção. Eu penso na distância entre a gente e em tudo que ainda quero transformar em presença: ouvir tua risada do meu lado, dividir um dia comum, poder te abraçar. Essa música me lembra o tamanho do que sinto por você.</p><div class="song-actions"><button class="song-open" type="button" data-audio="assets/audio/oceano.m4a" data-song="Oceano" data-artist="Djavan" aria-expanded="false" aria-controls="song-player-dedication-3" aria-label="Ouvir Oceano, de Djavan"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span class="song-button-label">Ouvir esta música</span></button></div><div class="song-player-slot" id="song-player-dedication-3" hidden></div></div></article><article class="dedication-track dedication-special"><span class="dedication-number" aria-hidden="true">05</span><div class="dedication-body"><p class="song-note-eyebrow">Uma que você ama</p><h3 class="song-name">Sangue Latino</h3><p class="song-artist">Secos &amp; Molhados · voz de Ney Matogrosso</p><p class="dedication-heading">Essa também é por você amar</p><p class="song-dedication">Ouço nela identidade, liberdade e força pra seguir o próprio caminho. Sei que você ama essa música, e quis guardar um espaço pra ela aqui. Gosto de conhecer as coisas que te tocam. Esse teu jeito inteiro, sincero e tão teu também me encanta, meu amor.</p><div class="song-actions"><button class="song-open" type="button" data-audio="assets/audio/sangue-latino.m4a" data-song="Sangue Latino" data-artist="Secos &amp; Molhados · voz de Ney Matogrosso" aria-expanded="false" aria-controls="song-player-dedication-4" aria-label="Ouvir Sangue Latino, de Secos &amp; Molhados · voz de Ney Matogrosso"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span class="song-button-label">Ouvir esta música</span></button></div><div class="song-player-slot" id="song-player-dedication-4" hidden></div></div></article></div><p class="soundtrack-signature">Se eu te mandasse uma música agora,<br>ela levaria um pouquinho de mim.</p><div class="actions"><button class="btn" type="button" data-go="4">Isso também importa pra mim <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></div></section>
+    <section class="chapter" id="chapter-4" aria-labelledby="title-4" data-page="4" hidden>
+      <div class="chapter-head"><p class="eyebrow">04 · O cuidado que eu quero ter</p><h2 id="title-4" tabindex="-1">Quero merecer<br> sua confiança.</h2></div>
       <p class="date-mark">Sobre a nossa conversa de ontem</p>
       <div class="chapter-copy letter"><p>Ontem eu te chateei e te decepcionei mais uma vez. Fiz você ter que me explicar algo que eu já deveria saber.</p><p>Eu entendi o que você me disse e consigo imaginar como foi pra você. Não quero te fazer sentir aquilo de novo.</p><p>Obrigado por me ouvir e me desculpar, meu amor. Quero prestar mais atenção, te escutar e ter cuidado com as coisas que importam pra você.</p><blockquote class="pullquote">Quero fazer por onde<br> merecer tua confiança.</blockquote><p>Com atitudes. No jeito que eu te escuto, no cuidado com o que eu faço e no respeito ao que você me diz. É assim que eu quero cuidar de você e do que existe entre nós.</p></div>
-      <div class="actions"><button class="btn" type="button" data-go="4">A última página <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></div>
+      <div class="actions"><button class="btn" type="button" data-go="5">A última página <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></button></div>
     </section>
-    <section class="chapter" id="chapter-5" aria-labelledby="title-5" data-page="4" hidden>
-      <div class="chapter-head"><p class="eyebrow">04 · O próximo capítulo</p><h2 id="title-5" tabindex="-1">Ainda tem tanta coisa<br> que eu quero viver contigo.</h2></div>
-      <figure class="photo last-photo"><img src="assets/images/beijo.png" width="1254" height="1254" alt="Imagem imaginada de um beijo meu na tua bochecha, à noite" loading="lazy"><figcaption>Uma cena que eu ainda imagino com você.</figcaption></figure>
+    <section class="chapter" id="chapter-5" aria-labelledby="title-5" data-page="5" hidden>
+      <div class="chapter-head"><p class="eyebrow">05 · O próximo capítulo</p><h2 id="title-5" tabindex="-1">Ainda tem tanta coisa<br> que eu quero viver contigo.</h2></div>
+      <div class="photo-keepsake keepsake-beijo"><figure class="photo last-photo"><img src="assets/images/beijo.png" width="1254" height="1254" alt="Imagem imaginada de um beijo meu na tua bochecha, à noite" loading="lazy"><figcaption>Uma cena que eu ainda imagino com você.</figcaption></figure><div class="photo-song-note" data-photo-song="beijo"><p class="song-note-eyebrow">Essa cena tem uma música</p><h3 class="song-name">Boto Namorador</h3><p class="song-artist">Dona Onete</p><blockquote class="song-quote" cite="https://www.cifraclub.com.br/dona-onete/boto-namorador/letra/">“Contam que um moço bonito<br>Saltava pra namorar”</blockquote><p class="song-dedication">O balanço e o encanto dessa música combinam com o beijo que eu imaginei aqui. Dá vontade de te chamar pra dançar, te puxar pra perto e roubar uma risada tua. Eu ia gostar demais de ser teu par, minha princesa.</p><div class="song-actions"><button class="song-open" type="button" data-audio="assets/audio/boto-namorador.m4a" data-song="Boto Namorador" data-artist="Dona Onete" aria-expanded="false" aria-controls="song-player-beijo" aria-label="Ouvir Boto Namorador, de Dona Onete"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 10 7-10 7Z"/></svg><span class="song-button-label">Ouvir esta música</span></button></div><div class="song-player-slot" id="song-player-beijo" hidden></div></div></div>
       <div class="chapter-copy letter"><p>Maria, eu gosto do que existe entre nós. Da nossa amizade, das nossas conversas e desse dengo que me faz sorrir.</p><p>Quero continuar dividindo meus dias contigo. Te ouvir, rir com você, estar mais perto e cuidar do que a gente construir.</p><p>E, se você também quiser, eu quero tentar de novo.</p></div>
       <h3 class="question">Maria, meu amor,<br> você quer voltar comigo?</h3>
       <p class="response-notice">Quando você escolher, sua resposta será enviada para o May. Você pode responder no seu tempo.</p>
@@ -723,7 +798,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
     </section>
     <noscript><p>Pra abrir as outras páginas do livrinho e ouvir a música, ative o JavaScript no navegador.</p></noscript>
   </main>
-  <footer class="book-footer"><div class="page-controls"><button type="button" class="page-back" id="back" disabled><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 12H5m6-6-6 6 6 6"/></svg></span> Página anterior</button><nav class="pages" aria-label="Páginas do livro"><button class="page-dot" type="button" data-go="0" aria-label="Capa" aria-current="page">1</button><button class="page-dot" type="button" data-go="1" aria-label="Os detalhes que eu guardo">2</button><button class="page-dot" type="button" data-go="2" aria-label="Eu gosto de ser teu May">3</button><button class="page-dot" type="button" data-go="3" aria-label="Quero merecer sua confiança">4</button><button class="page-dot" type="button" data-go="4" aria-label="O próximo capítulo">5</button></nav></div><p class="footer-signature">Com carinho, do teu May · 2026</p></footer>
+  <footer class="book-footer"><div class="page-controls"><button type="button" class="page-back" id="back" disabled><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 12H5m6-6-6 6 6 6"/></svg></span> Página anterior</button><nav class="pages" aria-label="Páginas do livro"><button class="page-dot" type="button" data-go="0" aria-label="Capa" aria-current="page">1</button><button class="page-dot" type="button" data-go="1" aria-label="Os detalhes que eu guardo">2</button><button class="page-dot" type="button" data-go="2" aria-label="Eu gosto de ser teu May">3</button><button class="page-dot" type="button" data-go="3" aria-label="Músicas que me levam até você">4</button><button class="page-dot" type="button" data-go="4" aria-label="Quero merecer sua confiança">5</button><button class="page-dot" type="button" data-go="5" aria-label="O próximo capítulo">6</button></nav></div><p class="footer-signature">Com carinho, do teu May · 2026</p></footer>
 </div>
 <script>
 (() => {
@@ -986,6 +1061,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
     chapters[current].querySelector('h1,h2').focus({preventScroll:true});
   }
   function openMusic() {
+    closeSongNote();
     if (opening || turning) return;
     intro.hidden = false;
     autoBookArmed = false;
@@ -1000,6 +1076,161 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
   }
   ['skip-music','to-book'].forEach(id => document.getElementById(id).addEventListener('click', openBook));
   ['cover-play','view-lyrics'].forEach(id => document.getElementById(id).addEventListener('click', openMusic));
+
+  let activeSongNote = null;
+  const notePositions = new Map();
+  const notePlayIcon = '<path d="m9 5 10 7-10 7Z"/>';
+  const notePauseIcon = '<path d="M7 5h3v14H7ZM14 5h3v14h-3Z"/>';
+  function closeSongNote() {
+    if (!activeSongNote) return;
+    const {button, slot, recording} = activeSongNote;
+    notePositions.set(button.dataset.audio, recording.ended ? 0 : recording.currentTime);
+    activeSongNote = null;
+    recording.pause();
+    recording.removeAttribute('src');
+    recording.load();
+    slot.replaceChildren();
+    slot.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', `Ouvir ${button.dataset.song}, de ${button.dataset.artist}`);
+    button.querySelector('.song-button-label').textContent = 'Ouvir esta música';
+    button.querySelector('svg').innerHTML = notePlayIcon;
+  }
+  document.querySelectorAll('.song-open').forEach(button => {
+    button.addEventListener('click', () => {
+      if (activeSongNote?.button === button) { closeSongNote(); return; }
+      closeSongNote();
+      audio.pause();
+      const slot = document.getElementById(button.getAttribute('aria-controls'));
+      const recording = document.createElement('audio');
+      recording.className = 'song-recording';
+      recording.preload = 'metadata';
+      recording.src = button.dataset.audio;
+      recording.volume = isiOS ? 1 : audio.volume;
+      recording.setAttribute('aria-label', `${button.dataset.song} — ${button.dataset.artist}`);
+      const player = document.createElement('div');
+      player.className = 'note-player';
+      player.setAttribute('role', 'group');
+      player.setAttribute('aria-label', `Player de ${button.dataset.song}`);
+      const toggle = document.createElement('button');
+      toggle.className = 'note-play';
+      toggle.type = 'button';
+      toggle.setAttribute('aria-label', `Tocar ${button.dataset.song}`);
+      toggle.setAttribute('aria-pressed', 'false');
+      toggle.innerHTML = `<svg class="note-play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${notePlayIcon}</svg>`;
+      const timeline = document.createElement('div');
+      timeline.className = 'note-timeline';
+      const seek = document.createElement('input');
+      seek.type = 'range';
+      seek.min = '0';
+      seek.max = '100';
+      seek.step = '0.1';
+      seek.value = '0';
+      seek.disabled = true;
+      seek.setAttribute('aria-label', `Posição de ${button.dataset.song}`);
+      const times = document.createElement('div');
+      times.className = 'note-times';
+      const elapsed = document.createElement('span');
+      elapsed.textContent = '0:00';
+      const duration = document.createElement('span');
+      duration.textContent = '—:—';
+      times.append(elapsed, duration);
+      timeline.append(seek, times);
+      player.append(toggle, timeline, recording);
+      const hint = document.createElement('p');
+      hint.className = 'song-player-hint';
+      hint.setAttribute('role', 'status');
+      slot.replaceChildren(player, hint);
+      slot.hidden = false;
+      button.setAttribute('aria-expanded', 'true');
+      button.setAttribute('aria-label', `Fechar player de ${button.dataset.song}`);
+      button.querySelector('.song-button-label').textContent = 'Fechar player';
+      button.querySelector('svg').innerHTML = '<path d="m6 6 12 12M18 6 6 18"/>';
+      const entry = {button, slot, recording};
+      activeSongNote = entry;
+      const isCurrent = () => activeSongNote === entry;
+      function updateState() {
+        if (!isCurrent()) return;
+        const playing = !recording.paused && !recording.ended;
+        toggle.setAttribute('aria-pressed', String(playing));
+        toggle.setAttribute('aria-label', `${playing ? 'Pausar' : 'Tocar'} ${button.dataset.song}`);
+        toggle.querySelector('svg').innerHTML = playing ? notePauseIcon : notePlayIcon;
+        player.classList.toggle('is-playing', playing);
+      }
+      function updateTime() {
+        if (!isCurrent()) return;
+        const available = Number.isFinite(recording.duration) && recording.duration > 0;
+        const progress = available ? recording.currentTime / recording.duration * 100 : 0;
+        seek.disabled = !available;
+        seek.value = String(progress);
+        seek.style.setProperty('--progress', progress+'%');
+        seek.setAttribute('aria-valuetext', `${timeText(recording.currentTime)} de ${timeText(recording.duration)}`);
+        elapsed.textContent = timeText(recording.currentTime);
+        duration.textContent = timeText(recording.duration);
+      }
+      let pending = false;
+      async function playNote() {
+        if (!isCurrent() || pending) return;
+        pending = true;
+        toggle.disabled = true;
+        toggle.setAttribute('aria-busy','true');
+        player.classList.add('is-loading');
+        hint.textContent = 'Carregando a música…';
+        audio.pause();
+        if (recording.error) recording.load();
+        if (recording.ended) recording.currentTime = 0;
+        let deadline;
+        try {
+          await Promise.race([
+            recording.play(),
+            new Promise((_, reject) => {deadline=setTimeout(() => reject(new Error('Audio loading timed out')),15000);})
+          ]);
+          if (!isCurrent()) { recording.pause(); return; }
+          hint.textContent = '';
+        } catch {
+          if (isCurrent()) {
+            recording.pause();
+            recording.load();
+            hint.textContent = 'A música não abriu. Toque no play pra tentar de novo.';
+          }
+        } finally {
+          clearTimeout(deadline);
+          pending = false;
+          if (isCurrent()) {
+            toggle.disabled = false;
+            toggle.setAttribute('aria-busy','false');
+            player.classList.remove('is-loading');
+            updateState();
+          }
+        }
+      }
+      toggle.addEventListener('click', () => {
+        if (!recording.paused) recording.pause();
+        else playNote();
+      });
+      seek.addEventListener('input', () => {
+        if (Number.isFinite(recording.duration)) recording.currentTime = Number(seek.value) / 100 * recording.duration;
+        updateTime();
+      });
+      recording.addEventListener('loadedmetadata', () => {
+        const position = notePositions.get(button.dataset.audio) || 0;
+        if (position > 0 && position < recording.duration) recording.currentTime = position;
+        updateTime();
+      });
+      recording.addEventListener('timeupdate', updateTime);
+      recording.addEventListener('seeked', updateTime);
+      recording.addEventListener('play', () => {if (isCurrent()) audio.pause(); updateState();});
+      recording.addEventListener('pause', updateState);
+      recording.addEventListener('ended', () => {updateState(); hint.textContent = 'Pode ouvir de novo, meu amor.';});
+      recording.addEventListener('error', () => {
+        if (isCurrent()) hint.textContent = 'A música não abriu. Toque no play pra tentar de novo.';
+      });
+      playNote();
+      if (!reducedMotion.matches) slot.animate([{opacity:0,transform:'translateY(-6px)'},{opacity:1,transform:'none'}],{duration:280,easing:'ease-out'});
+    });
+  });
+  audio.addEventListener('play', closeSongNote);
+  window.addEventListener('pagehide', closeSongNote);
 
   function updatePages() {
     pageLabel.textContent = String(current + 1);
@@ -1019,6 +1250,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
       return;
     }
     if (index === current) return;
+    closeSongNote();
     turning = true;
     const previous = chapters[current];
     const next = chapters[index];
