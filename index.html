@@ -876,6 +876,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
   }
   async function playSong() {
     if (pendingPlay) return;
+    closeSongNote();
     pendingPlay = true;
     introPlay.disabled = true;
     bookPlay.disabled = true;
@@ -1229,7 +1230,7 @@ button:not(.lyric-line){position:relative;isolation:isolate;overflow:hidden}
       if (!reducedMotion.matches) slot.animate([{opacity:0,transform:'translateY(-6px)'},{opacity:1,transform:'none'}],{duration:280,easing:'ease-out'});
     });
   });
-  audio.addEventListener('play', closeSongNote);
+  audio.addEventListener('play', () => {if (!audio.paused) closeSongNote();});
   window.addEventListener('pagehide', closeSongNote);
 
   function updatePages() {
